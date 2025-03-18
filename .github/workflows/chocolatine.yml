@@ -48,8 +48,9 @@ jobs:
 
             - name: Check binary presence
               run: |
-                if [ ! -f ./swapupcase]; then
-                    echo "::error file=swapupcase, title-Binary Error::Binary not found"
+                if [! -f ./${{ env.EXECUTABLES }}]; then
+                    echo "::error file=./${{ env.EXECUTABLES }}, title=Binary
+                    Error::Binary not found"
                     exit 1
                 fi
                 exit 0
@@ -73,3 +74,22 @@ jobs:
 
             - name: Run Integration tests
               run: ./integration_testing
+
+    push_to_mirror:
+      runs-on: ubuntu-latest
+      name: push_to_mirror
+      needs: [complie, coding-style, run-tests]
+      if: github.event_name == 'push'
+
+      steps:
+
+          - name: Checkout GH repo
+            uses: actions/checkout@master
+            with:
+              fetch-depth: 0
+
+          - name: push_to_mirror
+            uses: pixta-dev/repository-mirroring-action@v1
+            with:
+              target_repo_url: ${{ env.MIRROR_URL }}
+              ssh_private_key: ${{ secrets.GIT_SSH_PRIVATE_KEY }}
