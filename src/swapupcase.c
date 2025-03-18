@@ -1,5 +1,5 @@
 /*
-** EPITECH PROJECT, 2023
+** EPITECH PROJECT, 2025
 ** swapupcase
 ** File description:
 ** swapupcase.c

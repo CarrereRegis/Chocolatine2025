@@ -1,5 +1,5 @@
 /*
-** EPITECH PROJECT, 2023
+** EPITECH PROJECT, 2025
 ** ws-github-actions
 ** File description:
 ** integration_tests

@@ -1,5 +1,5 @@
 ##
-## EPITECH PROJECT, 2023
+## EPITECH PROJECT, 2025
 ## stumpers
 ## File description:
 ## Makefile
@@ -26,7 +26,7 @@ $(NAME):	$(OBJ)
 		gcc -o $(NAME) $(OBJ)
 
 debug:
-		gcc -o $(NAME) $(SRC) $(CPPFLAGS) -ggdb3
+		gcc -o $(NAME) $(SRC) $(CPPFLAGS)
 
 compile_tests:
 		gcc -o unit_testing $(TESTS_SRC) tests/unit_tests.c \
