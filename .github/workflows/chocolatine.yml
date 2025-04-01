@@ -21,7 +21,7 @@ jobs:
         steps:
 
             - name: Checkout GH repo
-              uses: actions/checkout@master
+              uses: actions/checkout@v4
 
             - name: Run coding-style checker
               run: check.sh $(pwd) $(pwd)
@@ -41,7 +41,7 @@ jobs:
         steps:
 
             - name: Checkout GH repo
-              uses: actions/checkout@master
+              uses: actions/checkout@v4
 
             - name: Compile repository
               run: make
@@ -64,7 +64,7 @@ jobs:
         steps:
 
             - name: Checkout GH repo
-              uses: actions/checkout@master
+              uses: actions/checkout@v4
 
             - name: Complie tests binaries
               run: make compile_tests
@@ -84,7 +84,7 @@ jobs:
       steps:
 
           - name: Checkout GH repo
-            uses: actions/checkout@master
+            uses: actions/checkout@v4
             with:
               fetch-depth: 0
 
