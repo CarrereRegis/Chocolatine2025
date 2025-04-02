@@ -7,7 +7,7 @@ on:
       branches-ignore: [ga-ignore-*]
 
 env:
-  MIRROR_URL: git@github.com:EpitechPGEPromo2029/B-DOP-200-BDX-2-1-chocolatine-regis.carrere.git
+  MIRROR_URL: "git@github.com:EpitechPGEPromo2029/B-DOP-200-BDX-2-1-chocolatine-regis.carrere.git"
   EXCUTABLES: 'swapcase'
 
 jobs:
